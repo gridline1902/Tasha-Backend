@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_images",
+  "info": {
+    "singularName": "category-image",
+    "pluralName": "category-images",
+    "displayName": "category-image",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "category_images"
+    }
+  }
+}
